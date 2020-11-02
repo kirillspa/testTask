@@ -17,7 +17,7 @@ class Account
       :currency => @currency,
       :balance => @balance,
       :nature => @nature,
-      :transactions => @transactions
+      :transactions => @transactions.map { |transaction| transaction.to_hash}
     }
   end
 end
